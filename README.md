@@ -34,7 +34,7 @@ This guide shows:
 
 #### Option A) Chocolatey (recommended for scriptability)
 
-```powershell
+**```powershell**
 # Run PowerShell as Administrator
 choco install awscli -y
 aws --version
@@ -52,7 +52,7 @@ winget: winget install -e --id Python.Python.3.11
 
 choco: choco install python -y
 
-🐧 Linux (Ubuntu / Debian)
+**🐧 Linux (Ubuntu / Debian)**
 bash
 Copy
 Edit
@@ -62,7 +62,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
-🍏 macOS
+**🍏 macOS**
 bash
 Copy
 Edit
@@ -71,7 +71,7 @@ sudo installer -pkg AWSCLIV2.pkg -target /
 aws --version
 (Optionally: brew install awscli)
 
-2) Configure AWS CLI
+**2) Configure AWS CLI**
 bash
 Copy
 Edit
@@ -87,14 +87,14 @@ Copy
 Edit
 aws configure --profile dev
 aws configure --profile prod
-3) Quick Test
+**3) Quick Test**
 bash
 Copy
 Edit
 aws sts get-caller-identity
 You should see your AWS Account, UserId, and ARN.
 
-4) Create an S3 Bucket (from your PC)
+**4) Create an S3 Bucket (from your PC)**
 IMPORTANT:
 
 Bucket names are globally unique.
@@ -118,9 +118,6 @@ aws s3api create-bucket \
   --bucket mybucketvishwjeetbidkar2 \
   --region ap-south-1 \
   --create-bucket-configuration LocationConstraint=ap-south-1
-List buckets:
+**List buckets:**
 
-bash
-Copy
-Edit
 aws s3 ls

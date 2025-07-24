@@ -52,7 +52,10 @@ winget: winget install -e --id Python.Python.3.11
 
 choco: choco install python -y
 
+
+
 **🐧 Linux (Ubuntu / Debian)**
+
 bash
 Copy
 Edit
@@ -62,7 +65,10 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 sudo ./aws/install
 aws --version
+
+
 **🍏 macOS**
+
 bash
 Copy
 Edit
@@ -72,14 +78,15 @@ aws --version
 (Optionally: brew install awscli)
 
 **2) Configure AWS CLI**
+
 bash
 Copy
 Edit
 aws configure
-# AWS Access Key ID [None]: <YOUR_ACCESS_KEY>
-# AWS Secret Access Key [None]: <YOUR_SECRET_KEY>
-# Default region name [None]: us-east-1   # or ap-south-1 etc.
-# Default output format [None]: json
+ AWS Access Key ID [None]: <YOUR_ACCESS_KEY>
+ AWS Secret Access Key [None]: <YOUR_SECRET_KEY>
+ Default region name [None]: us-east-1   # or ap-south-1 etc.
+ Default output format [None]: json
 Create extra named profiles (optional):
 
 bash
@@ -87,6 +94,7 @@ Copy
 Edit
 aws configure --profile dev
 aws configure --profile prod
+
 **3) Quick Test**
 bash
 Copy
@@ -118,6 +126,7 @@ aws s3api create-bucket \
   --bucket mybucketvishwjeetbidkar2 \
   --region ap-south-1 \
   --create-bucket-configuration LocationConstraint=ap-south-1
+
 **List buckets:**
 
 aws s3 ls
